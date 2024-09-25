@@ -1,29 +1,19 @@
-# notes-app-ci/cd-example
-Simple Node.js application with unit tests to show how to automate tests using Harness CI!
+# harness-cdci-ci/cd-example
+
+Node.js application deployed on Docker-Kubernetes cluster with continuous deployment support provided by Harness CDCI. Project unit test updates are automatically tested using Harness Delegate CD Pipeline configuration and Harness Manager controllers. Testing is injected before the push to a remote location, in this case, github. See the doc/ directory for setup and configuration.
 
 ## Prerequisites
-> - Free [Harness cloud](https://www.harness.io/products/continuous-integration?utm_source=internal&utm_medium=social&utm_campaign=devadvocacy&utm_content=pavan_notes_article&utm_term=get-started) account to set up continuous integration 
-> - [Node.js](https://nodejs.org/en/download/) installed 
 
-## Install
-```
-git clone https://github.com/pavanbelagatti/notes-app-cicd.git 
-```
-```
-cd notes-app-cicd
-```
-```
-npm install
-```
+> - [Node.js](https://nodejs.org/en/download/) installed and globally available.
+> - [Docker Desktop](https://app.docker.com/) requires a FREE account and Docker Hub project setup.
+> - [Kubernetes](https://kubernetes.io/) requires installing Kubernetes extension through Docker Desktop.
+> - [Harness cloud](https://app.harness.io/) requires a FREE account to set up continuous integration.
 
-## Run
-```
-node app.js
-```
-Visit http://localhost:3000 in your browser
+## References
 
-## Test
-To run tests
-```
-npm test
-```
+This project reference two other projects which are linked here for credit/convenience.
+
+> - [Harness Community Example](https://github.com/harness-community/harnesscd-example-apps/) lots of examples.
+> - [Note App CDCI](https://github.com/pavanbelagatti/notes-app-cicd.git) Paven Belagatti's implementation project.
+
+Enjoy
