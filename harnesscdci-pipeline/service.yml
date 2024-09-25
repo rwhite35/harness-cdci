@@ -1,0 +1,24 @@
+service:
+  name: harness_notebook
+  identifier: harnessnotebook
+  serviceDefinition:
+    type: Kubernetes
+    spec:
+      manifests:
+        - manifest:
+            identifier: notebook
+            type: K8sManifest
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: harnessgitconnector
+                  gitFetchType: Branch
+                  paths:
+                    - deployment.yaml
+                    - service.yaml
+                  repoName: harness-cdci
+                  branch: main
+                skipResourceVersioning: false
+                enableDeclarativeRollback: false
+  gitOpsEnabled: false
