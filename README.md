@@ -1,6 +1,6 @@
-# harness-cdci-ci/cd-example
+# Continuous Deployment Project
 
-Node.js application deployed on Docker-Kubernetes cluster with continuous deployment support provided by Harness CDCI. Project unit test updates are automatically tested using Harness Delegate CD Pipeline configuration and Harness Manager controllers. Testing is injected before the push to a remote location, in this case, github. See the doc/ directory for setup and configuration.
+A simple Node.js application deployed on Docker-Kubernetes cluster with continuous deployment support provided by Harness CDCI. Project unit test updates are automatically tested using Harness Delegate CD Pipeline configuration and Harness Manager controllers. Testing is injected before the push to a remote location, in this case, github. See the doc/ directory for setup and configuration.
 
 ## Prerequisites
 
