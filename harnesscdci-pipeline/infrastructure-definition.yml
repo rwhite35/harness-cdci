@@ -1,15 +1,17 @@
+# from Harness Platform: Trial Project > Settings > Environment
 infrastructureDefinition:
-  name: harness_k8sinfra
-  identifier: harnessk8sinfra
-  description: ""
-  tags: {}
+  name: trialinfrastructure
+  identifier: trialinfrastructure
+  description: infrastructure describes environment 'where' app is running
   orgIdentifier: default
-  projectIdentifier: default_project
-  environmentRef: harnessdevenv
+  projectIdentifier: Trial_Project
+  environmentRef: trialdevenv
   deploymentType: Kubernetes
   type: KubernetesDirect
   spec:
-    connectorRef: harnessk8sconnector
-    namespace: default
-    releaseName: release-<+INFRA_KEY>
+    connectorRef: trialconnector
+    namespace: harness-cpci
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
   allowSimultaneousDeployments: false
+  scopedServices:
+    - harness_service
