@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: harness-cdci-deployment
-          image: ronwhite562/harness-cdci
+          image: DOCKERHUB_USERNAME/harness-cdci
           resources:
             requests:
               cpu: "100m"
