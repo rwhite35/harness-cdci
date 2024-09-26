@@ -5,6 +5,16 @@ service:
   serviceDefinition:
     type: Kubernetes
     spec:
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - spec:
+                connectorRef: Docker_Hub_with_Pwd
+                imagePath: library/nginx
+                tag: <+input>
+              identifier: nginx
+              type: DockerRegistry
       manifests:
         - manifest:
             identifier: harnessK8sService
