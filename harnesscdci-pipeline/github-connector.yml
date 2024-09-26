@@ -6,13 +6,13 @@ connector:
   projectIdentifier: default_project
   type: Github
   spec:
-    url: https://github.com/GITHUB_USERNAME/harness-cdci
+    url: https://github.com/rwhite35/harness-cdci
     authentication:
       type: Http
       spec:
         type: UsernameToken
         spec:
-          username: GITHUB_USERNAME
+          username: rwhite35
           tokenRef: harness_gitpat
     apiAccess:
       type: Token

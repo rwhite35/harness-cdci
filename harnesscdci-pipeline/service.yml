@@ -4,7 +4,23 @@ service:
   description: for Trial Project
   serviceDefinition:
     type: Kubernetes
-    spec: {}
+    spec:
+      manifests:
+        - manifest:
+            identifier: harnessK8sService
+            type: K8sManifest
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: harnessgitconnector
+                  gitFetchType: Branch
+                  paths:
+                    - harnesscdci-pipeline
+                  repoName: harness-cdci
+                  branch: main
+                skipResourceVersioning: false
+                enableDeclarativeRollback: false
   gitOpsEnabled: false
   orgIdentifier: default
   projectIdentifier: Trial_Project
