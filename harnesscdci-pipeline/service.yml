@@ -1,12 +1,13 @@
 service:
-  name: harness_notebook
-  identifier: harnessnotebook
+  name: harness_service
+  identifier: harness_service
+  description: for Trial Project
   serviceDefinition:
     type: Kubernetes
     spec:
       manifests:
         - manifest:
-            identifier: notebook
+            identifier: harnessK8sService
             type: K8sManifest
             spec:
               store:
@@ -15,10 +16,11 @@ service:
                   connectorRef: harnessgitconnector
                   gitFetchType: Branch
                   paths:
-                    - deployment.yaml
-                    - service.yaml
+                    - harnesscdci-pipeline
                   repoName: harness-cdci
                   branch: main
                 skipResourceVersioning: false
                 enableDeclarativeRollback: false
   gitOpsEnabled: false
+  orgIdentifier: default
+  projectIdentifier: Trial_Project
