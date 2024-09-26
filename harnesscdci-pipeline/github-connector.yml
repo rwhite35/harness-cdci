@@ -3,7 +3,7 @@ connector:
   identifier: harnessgitconnector
   description: ""
   orgIdentifier: default
-  projectIdentifier: default_project
+  projectIdentifier: Trial_Project
   type: Github
   spec:
     url: https://github.com/rwhite35/harness-cdci
