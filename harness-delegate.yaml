@@ -54,10 +54,10 @@ spec:
         prometheus.io/path: "/api/metrics"
     spec:
       terminationGracePeriodSeconds: 600
-      restartPolicy: Always
+      restartPolicy: Never
       containers:
         - image: harness/delegate:24.09.83900 # please do not use harness/delegate:latest
-          imagePullPolicy: Always
+          imagePullPolicy: Never
           name: delegate
           securityContext:
             allowPrivilegeEscalation: false
